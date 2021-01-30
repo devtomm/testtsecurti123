@@ -21,7 +21,7 @@ const listener = app.listen(process.env.PORT, () => {
 const fs = require("fs");
 const Discord = require("discord.js");
 const mars = new Discord.Client({ disableMentions: 'everyone' });
-const prefix = "c!";
+const prefix = "h!";
 
 mars.on("ready", async () => {
   console.log(`Logged in as ${mars.user.username}!`);
@@ -37,29 +37,29 @@ mars.on("ready", async () => {
 });
 //////////
 mars.on("message", message => {
-  if (message.content === "c!help") {
+  if (message.content === "h!help") {
     const embed = new Discord.MessageEmbed()
       .setColor("BLUE")
       .setDescription(
         `━────╮•╭────━
 <a:emoji_14:798075807977046028> **Security Commands**
 
-<a:emoji_8:797912425717301318> c!anti ban [Number]
+<a:emoji_8:797912425717301318> h!anti ban [Number]
 <a:emoji_9:797912443628027955>
-<a:emoji_11:797914740033716224> c!anti kick [Number]
+<a:emoji_11:797914740033716224> h!anti kick [Number]
 <a:emoji_9:797912443628027955>
-<a:emoji_7:797912407309287434> c!anti channel [Number]
+<a:emoji_7:797912407309287434> h!anti channel [Number]
 <a:emoji_9:797912443628027955>
-<a:emoji_7:797912407309287434> c!anti role [Number]
+<a:emoji_7:797912407309287434> h!anti role [Number]
 <a:emoji_9:797912443628027955>
-<a:emoji_13:798075791065350174> c!anti time [Number]
+<a:emoji_13:798075791065350174> h!anti time [Number]
 <a:emoji_9:797912443628027955>
-<a:emoji_6:797912372793573377> c!about [about bot]
+<a:emoji_6:797912372793573377> h!about [about bot]
 <a:emoji_9:797912443628027955>
-<a:emoji_5:797912346759659591> c!invite [link bot]
+<a:emoji_5:797912346759659591> h!invite [link bot]
 ━────╮•╭────━`
       )
-      .setURL("https://discord.gg/jH4tUDsrDM")
+      .setURL("https://discord.gg/9yEZCfum")
       .setTitle("support - Server");
     message.channel.send(embed);
   }
@@ -91,7 +91,7 @@ mars.on("message", message => {
 });
 /////////////// code invite bot
 mars.on("message", message => {
-  if (message.content === "c!invite") {
+  if (message.content === "h!invite") {
     if (!message.channel.guild)
       return message.reply(
         "Please Do not type bot commands in bot private chat"
@@ -100,7 +100,7 @@ mars.on("message", message => {
       .setColor("BLUE")
       .setTitle("=--> click touch for link bot <--=")
       .setURL(
-        "https://discord.com/api/oauth2/authorize?client_id=794307037060268053&permissions=8&scope=bot"
+        "https://discord.com/api/oauth2/authorize?client_id=792491673871581234&permissions=8&scope=bot"
       );
     message.channel.send(embed);
   }
@@ -146,7 +146,7 @@ const ghallat = "";
 const ghallatw = "";
 const logosec = "";
 const warn = "⚠";
-const color = "BLUE";
+const color = "#0000";
 let anti = JSON.parse(fs.readFileSync("./antigreff.json", "UTF8"));
 let config = JSON.parse(fs.readFileSync("./configg.json", "UTF8"));
 mars.on("message", message => {
@@ -171,7 +171,7 @@ mars.on("message", message => {
       time: 0.1
     };
   if (message.content.startsWith(prefix + "anti")) {
-    if (!message.member.hasPermission("OWNERSHIP")) return message.reply("__**just ADMINISTRATOR**__");
+    if (!message.member.hasPermission("Administration")) return message.reply("__**just ADMINISTRATOR**__");
     if (message.content.startsWith(prefix + "anti ban")) {
       if (!num)
         return message.channel.send("**" + ghallat + " | Type A `Number` .**");
@@ -181,7 +181,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].banLimit = num;
       message.channel.send(
-        `** 🔒 | changeda ⇏ ${config[message.guild.id].banLimit} **`
+        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].banLimit}`
       );
     }
     if (message.content.startsWith(prefix + "anti kick")) {
@@ -193,7 +193,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].kickLimits = num;
       message.channel.send(
-        `** 🔒 | changeda ⇏ ${config[message.guild.id].kickLimits}**`
+        `<a:emoji_2:797910617554026517> | changeda  ${config[message.guild.id].kickLimits}`
       );
     }
     if (message.content.startsWith(prefix + "anti role")) {
@@ -205,7 +205,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].roleDelLimit = num;
       message.channel.send(
-        `** 🔒 | changeda ⇏ ${config[message.guild.id].roleDelLimit}**`
+        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].roleDelLimit}`
       );
     }
     if (message.content.startsWith(prefix + "anti role")) {
@@ -217,7 +217,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].roleCrLimits = num;
       message.channel.send(
-        `** 🔒 | changeda ⇏ ${config[message.guild.id].roleCrLimits}**`
+        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].roleCrLimits}`
       );
     }
     if (message.content.startsWith(prefix + "anti channel")) {
@@ -229,7 +229,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].chaDelLimit = num;
       message.channel.send(
-        `** 🔒 | changeda ⇏ ${config[message.guild.id].chaDelLimit}**`
+        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].chaDelLimit}`
       );
     }
     if (message.content.startsWith(prefix + "anti channel")) {
@@ -241,7 +241,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].chaCrLimit = num;
       message.channel.send(
-        `** 🔒 | changeda ⇏ ${config[message.guild.id].chaCrLimit}**`
+        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].chaCrLimit}`
       );
     }
     if (message.content.startsWith(prefix + "anti time")) {
@@ -253,7 +253,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].time = num;
       message.channel.send(
-        `** 🔒 | changeda ⇏ ${config[message.guild.id].time}**`
+        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].time}`
       );
     }
     fs.writeFile("./configg.json", JSON.stringify(config, null, 2), function(
@@ -310,7 +310,7 @@ mars.on("channelCreate", async channel => {
         .ban()
         .catch(e =>
           channel.guild.owner.send(
-            `**<a:emoji_3:798080143217655809> | ${entry.username} Tryed To Create Many Channels .**`
+            `** <:26C88821D9514439A546DF39ED9090FA:798508537718374401> | ${entry.username} Tryed To Create Many Channels .**`
           )
         );
       anti[channel.guild.id + entry.id].actions = "0";
@@ -376,7 +376,7 @@ mars.on("channelDelete", async channel => {
         .ban()
         .catch(e =>
           channel.guild.owner.send(
-            `**<a:emoji_3:798080143217655809> | ${entry.username} Tryed To Delete Many Channels .**`
+            `** <:26C88821D9514439A546DF39ED9090FA:798508537718374401> | ${entry.username} Tryed To Delete Many Channels .**`
           )
         );
       anti[channel.guild.id + entry.id].actions = "0";
@@ -442,7 +442,7 @@ mars.on("roleDelete", async channel => {
         .ban()
         .catch(e =>
           channel.guild.owner.send(
-            `**<a:emoji_3:798080143217655809> | ${entry.username} Tryed To Delete Many Rolea .**`
+            `** <:26C88821D9514439A546DF39ED9090FA:798508537718374401> | ${entry.username} Tryed To Delete Many Rolea .**`
           )
         );
       anti[channel.guild.id + entry.id].actions = "0";
@@ -508,7 +508,7 @@ mars.on("roleCreate", async channel => {
         .ban()
         .catch(e =>
           channel.guild.owner.send(
-            `** <a:emoji_3:798080143217655809> | ${entry.username} Tryed To Create Many Roles .**`
+            `**<:26C88821D9514439A546DF39ED9090FA:798508537718374401> | ${entry.username} Tryed To Create Many Roles .**`
           )
         );
       anti[channel.guild.id + entry.id].actions = "0";
@@ -571,7 +571,7 @@ mars.on("guildBanAdd", async (guild, user) => {
         .ban()
         .catch(e =>
           guild.owner.send(
-            `**<a:emoji_3:798080143217655809> | ${entry.username} Tryed To Ban Many Members .**`
+            `** <:26C88821D9514439A546DF39ED9090FA:798508537718374401> | ${entry.username} Tryed To Ban Many Members .**`
           )
         );
       anti[guild.id + entry.id].actions = "0";
@@ -634,7 +634,7 @@ mars.on("guildKickAdd", async (guild, user) => {
         .ban()
         .catch(e =>
           guild.owner.send(
-            `**<a:emoji_3:798080143217655809> | ${entry.username} Tryed To Kick Many Members .**`
+            `** <:26C88821D9514439A546DF39ED9090FA:798508537718374401> > | ${entry.username} Tryed To Kick Many Members .**`
           )
         );
       anti[guild.id + entry.id].actions = "0";
@@ -703,7 +703,7 @@ mars.on("guildMemberRemove", async member => {
           .ban()
           .catch(e =>
             member.owner.send(
-              `**<a:emoji_3:798080143217655809> | ${entry.username} Tryed To Ban Many Members .**`
+              `** <:26C88821D9514439A546DF39ED9090FA:798508537718374401> | ${entry.username} Tryed To Ban Many Members .**`
             )
           );
         anti[member.guild.id + entry.id].actions = "0";
