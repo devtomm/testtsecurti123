@@ -42,7 +42,7 @@ mars.on("message", message => {
       .setColor("BLUE")
       .setDescription(
         `━────╮•╭────━
-<a:emoji_14:798075807977046028> **Security Commands**
+<a:emoji_14:743777558792765481> **Security Commands**
 
 <a:emoji_8:797912425717301318> h!anti ban [Number]
 <a:emoji_9:797912443628027955>
@@ -78,7 +78,7 @@ mars.on("message", message => {
 
       .addField(
         "**Owner** : ",
-        `<a:emoji_7:797912407309287434> <@731952429238714378>`,
+        `<a:emoji_7:743777558792765481> <@731952429238714378>`,
         true
       )
 
