@@ -21,7 +21,7 @@ const listener = app.listen(process.env.PORT, () => {
 const fs = require("fs");
 const Discord = require("discord.js");
 const mars = new Discord.Client({ disableMentions: 'everyone' });
-const prefix = "h!";
+const prefix = "H!";
 
 mars.on("ready", async () => {
   console.log(`Logged in as ${mars.user.username}!`);
@@ -181,7 +181,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].banLimit = num;
       message.channel.send(
-        `<a:emoji_11:771932540311044126> | changeda ${config[message.guild.id].banLimit}`
+        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].banLimit}`
       );
     }
     if (message.content.startsWith(prefix + "anti kick")) {
@@ -229,7 +229,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].chaDelLimit = num;
       message.channel.send(
-        `<a:emoji_11:771932540311044126> | changeda ${config[message.guild.id].chaDelLimit}`
+        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].chaDelLimit}`
       );
     }
     if (message.content.startsWith(prefix + "anti channel")) {
@@ -241,7 +241,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].chaCrLimit = num;
       message.channel.send(
-        `<a:emoji_11:771932540311044126> | changeda ${config[message.guild.id].chaCrLimit}`
+        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].chaCrLimit}`
       );
     }
     if (message.content.startsWith(prefix + "anti time")) {
@@ -253,7 +253,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].time = num;
       message.channel.send(
-        `<a:emoji_11:771932540311044126> | changeda ${config[message.guild.id].time}`
+        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].time}`
       );
     }
     fs.writeFile("./configg.json", JSON.stringify(config, null, 2), function(
