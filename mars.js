@@ -37,26 +37,26 @@ mars.on("ready", async () => {
 });
 //////////
 mars.on("message", message => {
-  if (message.content === "h!help") {
+  if (message.content === "H!help") {
     const embed = new Discord.MessageEmbed()
       .setColor("BLUE")
       .setDescription(
         `━────╮•╭────━
 <a:emoji_14:798075807977046028> **Security Commands**
 
-<a:emoji_8:797912425717301318> h!anti ban [Number]
+<a:emoji_8:797912425717301318> H!anti ban [Number]
 <a:emoji_9:797912443628027955>
-<a:emoji_11:797914740033716224> h!anti kick [Number]
+<a:emoji_11:797914740033716224> H!anti kick [Number]
 <a:emoji_9:797912443628027955>
-<a:emoji_7:797912407309287434> h!anti channel [Number]
+<a:emoji_7:797912407309287434> H!anti channel [Number]
 <a:emoji_9:797912443628027955>
-<a:emoji_7:797912407309287434> h!anti role [Number]
+<a:emoji_7:797912407309287434> H!anti role [Number]
 <a:emoji_9:797912443628027955>
-<a:emoji_13:798075791065350174> h!anti time [Number]
+<a:emoji_13:798075791065350174> H!anti time [Number]
 <a:emoji_9:797912443628027955>
-<a:emoji_6:797912372793573377> h!about [about bot]
+<a:emoji_6:797912372793573377> H!about [about bot]
 <a:emoji_9:797912443628027955>
-<a:emoji_5:797912346759659591> h!invite [link bot]
+<a:emoji_5:797912346759659591> H!invite [link bot]
 ━────╮•╭────━`
       )
       .setURL("https://discord.gg/9yEZCfum")
@@ -91,7 +91,7 @@ mars.on("message", message => {
 });
 /////////////// code invite bot
 mars.on("message", message => {
-  if (message.content === "h!invite") {
+  if (message.content === "H!invite") {
     if (!message.channel.guild)
       return message.reply(
         "Please Do not type bot commands in bot private chat"
@@ -181,7 +181,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].banLimit = num;
       message.channel.send(
-        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].banLimit}`
+        `<a:emoji_11:771932540311044126> | changeda ${config[message.guild.id].banLimit}`
       );
     }
     if (message.content.startsWith(prefix + "anti kick")) {
@@ -229,7 +229,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].chaDelLimit = num;
       message.channel.send(
-        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].chaDelLimit}`
+        `<a:emoji_11:771932540311044126> | changeda ${config[message.guild.id].chaDelLimit}`
       );
     }
     if (message.content.startsWith(prefix + "anti channel")) {
@@ -241,7 +241,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].chaCrLimit = num;
       message.channel.send(
-        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].chaCrLimit}`
+        `<a:emoji_11:771932540311044126> | changeda ${config[message.guild.id].chaCrLimit}`
       );
     }
     if (message.content.startsWith(prefix + "anti time")) {
@@ -253,7 +253,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].time = num;
       message.channel.send(
-        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].time}`
+        `<a:emoji_11:771932540311044126> | changeda ${config[message.guild.id].time}`
       );
     }
     fs.writeFile("./configg.json", JSON.stringify(config, null, 2), function(
