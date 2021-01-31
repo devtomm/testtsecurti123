@@ -42,7 +42,7 @@ mars.on("message", message => {
       .setColor("BLUE")
       .setDescription(
         `━────╮•╭────━
-<a:emoji_14:743777558792765481> **Security Commands**
+<a:emoji_14:798075807977046028> **Security Commands**
 
 <a:emoji_8:797912425717301318> h!anti ban [Number]
 <a:emoji_9:797912443628027955>
@@ -113,7 +113,7 @@ mars.on("message", msg => {
     if (msg.member.hasPermission("MANAGE_EMOJIS")) return;
     if (!msg.channel.guild) return;
     msg.delete();
-    msg.reply("```You cant send Partner .``` <a:emoji_8:743777558792765481>");
+    msg.reply("```You cant send Partner .```");
   }
 });
 ////////
@@ -124,7 +124,7 @@ mars.on("message", msg => {
     if (msg.member.hasPermission("MENTION_EVERYONE")) return;
     if (!msg.channel.guild) return;
     msg.delete();
-    msg.reply("```You cant send everyone .``` <a:emoji_8:743777558792765481>");
+    msg.reply("```You cant send everyone .```");
   }
 });
 
@@ -136,7 +136,7 @@ mars.on("message", msg => {
     if (msg.member.hasPermission("MENTION_EVERYONE")) return;
     if (!msg.channel.guild) return;
     msg.delete();
-    msg.reply("```You cant send here .``` <a:emoji_8:743777558792765481>");
+    msg.reply("```You cant send here .```");
   }
 });
 ////////////////// code security
@@ -217,7 +217,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].roleCrLimits = num;
       message.channel.send(
-        `<a:emoji_2:743777558792765481> | changeda ${config[message.guild.id].roleCrLimits}`
+        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].roleCrLimits}`
       );
     }
     if (message.content.startsWith(prefix + "anti channel")) {
@@ -229,7 +229,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].chaDelLimit = num;
       message.channel.send(
-        `<a:emoji_2:743777558792765481> | changeda ${config[message.guild.id].chaDelLimit}`
+        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].chaDelLimit}`
       );
     }
     if (message.content.startsWith(prefix + "anti channel")) {
@@ -241,7 +241,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].chaCrLimit = num;
       message.channel.send(
-        `<a:emoji_2:743777558792765481> | changeda ${config[message.guild.id].chaCrLimit}`
+        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].chaCrLimit}`
       );
     }
     if (message.content.startsWith(prefix + "anti time")) {
@@ -253,7 +253,7 @@ mars.on("message", message => {
         );
       config[message.guild.id].time = num;
       message.channel.send(
-        `<a:emoji_2:743777558792765481> | changeda ${config[message.guild.id].time}`
+        `<a:emoji_2:797910617554026517> | changeda ${config[message.guild.id].time}`
       );
     }
     fs.writeFile("./configg.json", JSON.stringify(config, null, 2), function(
@@ -376,7 +376,7 @@ mars.on("channelDelete", async channel => {
         .ban()
         .catch(e =>
           channel.guild.owner.send(
-            `** <:26C88821D9514439A546DF39ED9090FA:743777558792765481> | ${entry.username} Tryed To Delete Many Channels .**`
+            `**<:053AC378ED854CD0BDFB61F2CD5E5DAF:800236252237791272> | ${entry.username} Tryed To Delete Many Channels .**`
           )
         );
       anti[channel.guild.id + entry.id].actions = "0";
@@ -442,7 +442,7 @@ mars.on("roleDelete", async channel => {
         .ban()
         .catch(e =>
           channel.guild.owner.send(
-            `** <:26C88821D9514439A546DF39ED9090FA:743777558792765481> | ${entry.username} Tryed To Delete Many Rolea .**`
+            `** <:053AC378ED854CD0BDFB61F2CD5E5DAF:800236252237791272> | ${entry.username} Tryed To Delete Many Rolea .**`
           )
         );
       anti[channel.guild.id + entry.id].actions = "0";
@@ -508,7 +508,7 @@ mars.on("roleCreate", async channel => {
         .ban()
         .catch(e =>
           channel.guild.owner.send(
-            `**<:26C88821D9514439A546DF39ED9090FA:743777558792765481> | ${entry.username} Tryed To Create Many Roles .**`
+            `** <:053AC378ED854CD0BDFB61F2CD5E5DAF:800236252237791272> | ${entry.username} Tryed To Create Many Roles .**`
           )
         );
       anti[channel.guild.id + entry.id].actions = "0";
@@ -571,7 +571,7 @@ mars.on("guildBanAdd", async (guild, user) => {
         .ban()
         .catch(e =>
           guild.owner.send(
-            `** <:26C88821D9514439A546DF39ED9090FA:743777558792765481> | ${entry.username} Tryed To Ban Many Members .**`
+            `** <:053AC378ED854CD0BDFB61F2CD5E5DAF:800236252237791272>| ${entry.username} Tryed To Ban Many Members .**`
           )
         );
       anti[guild.id + entry.id].actions = "0";
@@ -634,7 +634,7 @@ mars.on("guildKickAdd", async (guild, user) => {
         .ban()
         .catch(e =>
           guild.owner.send(
-            `** <:26C88821D9514439A546DF39ED9090FA:743777558792765481> > | ${entry.username} Tryed To Kick Many Members .**`
+            `** <:053AC378ED854CD0BDFB61F2CD5E5DAF:800236252237791272> | ${entry.username} Tryed To Kick Many Members .**`
           )
         );
       anti[guild.id + entry.id].actions = "0";
@@ -703,7 +703,7 @@ mars.on("guildMemberRemove", async member => {
           .ban()
           .catch(e =>
             member.owner.send(
-              `** <:26C88821D9514439A546DF39ED9090FA:743777558792765481> | ${entry.username} Tryed To Ban Many Members .**`
+              `** <:053AC378ED854CD0BDFB61F2CD5E5DAF:800236252237791272> | ${entry.username} Tryed To Ban Many Members .**`
             )
           );
         anti[member.guild.id + entry.id].actions = "0";
