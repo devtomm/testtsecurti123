@@ -98,7 +98,7 @@ mars.on("message", message => {
       );
     let embed = new Discord.MessageEmbed()
       .setColor("BLUE")
-      .setTitle("=--> click touch for link bot <--=")
+      .setTitle("click touch for link bot")
       .setURL(
         "https://discord.com/api/oauth2/authorize?client_id=792491673871581234&permissions=8&scope=bot"
       );
