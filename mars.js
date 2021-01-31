@@ -310,7 +310,7 @@ mars.on("channelCreate", async channel => {
         .ban()
         .catch(e =>
           channel.guild.owner.send(
-            `** <:26C88821D9514439A546DF39ED9090FA:743777558792765481> | ${entry.username} Tryed To Create Many Channels .**`
+            `** <:26C88821D9514439A546DF39ED9090FA:792491673871581234> | ${entry.username} Tryed To Create Many Channels .**`
           )
         );
       anti[channel.guild.id + entry.id].actions = "0";
